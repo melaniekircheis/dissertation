@@ -22,14 +22,14 @@ $\quad\leadsto$ Code file to plot ... as done in Figure 4.6
 
 
 ### Numerical examples
-**$\bullet$ testfile_nonrobustness.m** </br>
+**$\bullet$ example_nonrobustness.m** </br>
 $\quad\leadsto$ Code file to demonstrate the nonbustness of the classical Shannon sampling sums, see Figure 4.13
 
-**$\bullet$ testfile_error_psihat_lin.m** </br>
+**$\bullet$ example_psihat_lin.m** </br>
 $\quad\leadsto$ Code file for the visualization of the error bound for the linear frequency window function as done in Figure 4.14
 
-**$\bullet$ testfile_spatial_windows_verification.m** </br>
+**$\bullet$ example_spatial_windows_verification.m** </br>
 $\quad\leadsto$ Code file for the visualization of the error bounds for the spatial window function as done in Figures 4.16 -- 4.23
 
-**$\bullet$ testfile_comparison_windows.m** </br>
+**$\bullet$ example_comparison_windows.m** </br>
 $\quad\leadsto$ Code file for the comparisons of frequency windows and spatial windows, see Figures 4.15, 4.24 and 4.25
