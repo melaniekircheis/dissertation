@@ -14,7 +14,7 @@ save_results = 0;
 % Set parameters
 m = 5; lambda = 0.25; beta = pi*m*lambda/(1+lambda);
 
-% Read known zeros j_{1,n} of the Bessel function J1
+% Read known zeros j_{1,n} of the Bessel function J1, see [Watson 80]
 j1 = [3.8317,7.0156,10.1735,13.3237,16.4706,19.6159];
 
 % Compute zeros of the integrand
