@@ -18,7 +18,13 @@ $\quad\leadsto$ Auxiliary code file containing the centered cardinal B-splines
 
 ### Visualization of properties in proofs
 **$\bullet$ assertion_bspline.m** </br>
-$\quad\leadsto$ Code file to plot ... as done in Figure 4.6
+$\quad\leadsto$ Code file to visualize the assertions made in the proof for the B-spline window function, see Figure 4.6
+
+**$\bullet$ assertion_sinh.m** </br>
+$\quad\leadsto$ Code file to visualize the assertions made in the proof for the sinh-type window function, see Figures 4.8 and 4.9
+
+**$\bullet$ assertion_cKB.m** </br>
+$\quad\leadsto$ Code file to visualize the assertions made in the proof for the continuous Kaiser-Bessel window function, see Figures 4.11 and 4.12
 
 
 ### Numerical examples
@@ -29,7 +35,7 @@ $\quad\leadsto$ Code file to demonstrate the nonbustness of the classical Shanno
 $\quad\leadsto$ Code file for the visualization of the error bound for the linear frequency window function as done in Figure 4.14
 
 **$\bullet$ example_spatial_windows_verification.m** </br>
-$\quad\leadsto$ Code file for the visualization of the error bounds for the spatial window function as done in Figures 4.16 -- 4.23
+$\quad\leadsto$ Code file for the visualization of the error bounds for the spatial window function as done in Figures 4.16 - 4.23
 
 **$\bullet$ example_comparison_windows.m** </br>
 $\quad\leadsto$ Code file for the comparisons of frequency windows and spatial windows, see Figures 4.15, 4.24 and 4.25
