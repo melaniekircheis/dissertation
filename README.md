@@ -3,6 +3,41 @@ This repository contains the code files used for my dissertation.
 </br></br>
 
 
+## Chapter 3 - Direct inversion methods for the NFFT
+
+### Visualization 
+**$\bullet$ plot_nonzeros_matrixB_1d.m** </br>
+$\quad\leadsto$ Code file to plot the structure of the sparse matrix $\boldsymbol B$ as done in Figure 3.1
+
+**$\bullet$ phi.m** </br>
+$\quad\leadsto$ Auxiliary code file containing the definitions of the window functions used
+
+**$\bullet$ phi_hat.m** </br>
+$\quad\leadsto$ Auxiliary code file containing the definitions of the Fourier transformed window functions used
+
+**$\bullet$ plot_grids.m** </br>
+$\quad\leadsto$ Code file to plot the considered grids as done in Figures 3.3 and 3.4
+
+### Numerical examples
+**$\bullet$ example_quality_densitycomp.m** </br>
+$\quad\leadsto$ Code file to ..., see Figure 3.5
+
+**$\bullet$ example_comparison_densitycomp.m** </br>
+$\quad\leadsto$ Code file to ..., see Figures 3.6 and 3.7
+
+**$\bullet$ example_densitycomp_phantom.m** </br>
+$\quad\leadsto$ Code file to ..., see Figure 3.8
+
+**$\bullet$ example_min_norm_B.m** </br>
+$\quad\leadsto$ Code file to ..., see Figure 3.9
+
+**$\bullet$ example_comparison_optB.m** </br>
+$\quad\leadsto$ Code file to ..., see Figure 3.10
+
+**$\bullet$ example_comparison.m** </br>
+$\quad\leadsto$ Code file to ..., see Figure 3.11
+
+</br></br>
 ## Chapter 4 - Regularized Shannon sampling formulas 
 
 ### Visualization of window functions
