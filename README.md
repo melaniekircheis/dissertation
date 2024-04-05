@@ -10,32 +10,36 @@ This repository contains the code files used for my dissertation.
 $\quad\leadsto$ Code file to plot the structure of the sparse matrix $\boldsymbol B$ as done in Figure 3.1
 
 **$\bullet$ phi.m** </br>
-$\quad\leadsto$ Auxiliary code file containing the definitions of the window functions used
+$\quad\leadsto$ Auxiliary code file containing the definitions of the NFFT window functions
 
 **$\bullet$ phi_hat.m** </br>
-$\quad\leadsto$ Auxiliary code file containing the definitions of the Fourier transformed window functions used
+$\quad\leadsto$ Auxiliary code file containing the definitions of the Fourier transformed window functions
 
 **$\bullet$ plot_grids.m** </br>
 $\quad\leadsto$ Code file to plot the considered grids as done in Figures 3.3 and 3.4
 
 ### Numerical examples
+
+*Please note that the official NFFT software (https://github.com/NFFT/nfft) is necessary to run most of the following code files. </br>
+A precompiled version can be downloaded from https://www-user.tu-chemnitz.de/~potts/nfft/download.php*
+
 **$\bullet$ example_quality_densitycomp.m** </br>
-$\quad\leadsto$ Code file to ..., see Figure 3.5
+$\quad\leadsto$ Code file to check the quality of the proposed density compensation method, see Figure 3.5
 
 **$\bullet$ example_comparison_densitycomp.m** </br>
-$\quad\leadsto$ Code file to ..., see Figures 3.6 and 3.7
+$\quad\leadsto$ Code file to compare the proposed density compensation method to methods from the literature for $d=1$, see Figures 3.6 and 3.7
 
 **$\bullet$ example_densitycomp_phantom.m** </br>
-$\quad\leadsto$ Code file to ..., see Figure 3.8
+$\quad\leadsto$ Code file to compare the proposed density compensation method to methods from the literature for $d=2$, see Figure 3.8
 
 **$\bullet$ example_min_norm_B.m** </br>
-$\quad\leadsto$ Code file to ..., see Figure 3.9
+$\quad\leadsto$ Code file to check the quality of the proposed matrix optimization method, see Figure 3.9
 
 **$\bullet$ example_comparison_optB.m** </br>
-$\quad\leadsto$ Code file to ..., see Figure 3.10
+$\quad\leadsto$ Code file to compare the proposed matrix optimization method to methods from the literature with $d=1$, see Figure 3.10
 
 **$\bullet$ example_comparison.m** </br>
-$\quad\leadsto$ Code file to ..., see Figure 3.11
+$\quad\leadsto$ Code file to compare the proposed density compensation method and the proposed matrix optimization method, see Figure 3.11
 
 </br></br>
 ## Chapter 4 - Regularized Shannon sampling formulas 
