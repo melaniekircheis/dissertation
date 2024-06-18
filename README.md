@@ -18,6 +18,7 @@ $\quad\leadsto$ Auxiliary code file containing the definitions of the Fourier tr
 **$\bullet$ plot_grids.m** </br>
 $\quad\leadsto$ Code file to plot the considered grids as done in Figures 3.3 and 3.4
 
+
 ### Numerical examples
 
 *Please note that the official NFFT software (https://github.com/NFFT/nfft) is necessary to run most of the following code files. </br>
@@ -40,6 +41,8 @@ $\quad\leadsto$ Code file to compare the proposed matrix optimization method to 
 
 **$\bullet$ example_comparison.m** </br>
 $\quad\leadsto$ Code file to compare the proposed density compensation method and the proposed matrix optimization method, see Figure 3.11
+
+
 
 </br></br>
 ## Chapter 4 - Regularized Shannon sampling formulas 
@@ -78,3 +81,42 @@ $\quad\leadsto$ Code file for the visualization of the error bounds for the spat
 
 **$\bullet$ example_comparison_windows.m** </br>
 $\quad\leadsto$ Code file for the comparisons of frequency windows and spatial windows, see Figures 4.15, 4.24 and 4.25
+
+
+
+</br></br>
+## Chapter 5 - Fast sinc methods 
+
+### Verification
+**$\bullet$ verification_tensorization_sinc_approx.m** </br>
+$\quad\leadsto$ Code file to verify the tensor product notation of the approximation of the sinc function
+
+**$\bullet$ testfile_nfft_like_approach.m** </br>
+$\quad\leadsto$ Code file to compare the NFFT-like approach and the NFFT as done in Figure 5.1
+
+
+### Numerical examples
+**$\bullet$ example_err_approx_sinc.m** </br>
+$\quad\leadsto$ Code file to visualize the sinc approximation by means of Clenshaw-Curtis and Gauss-Legendre quadrature, see Figures 5.2 and 5.3
+
+**$\bullet$ legpts.m** </br>
+$\quad\leadsto$ Code file containing the Legendre points and weights, source: https://github.com/chebfun/chebfun
+
+**$\bullet$ example_err_approx_sinc_least_square.m** </br>
+$\quad\leadsto$ Code file to visualize the sinc approximation by means of the least squares approach, see Figure 5.4
+
+**$\bullet$ example_maxerr_sinctrafo.m** </br>
+$\quad\leadsto$ Code file to demonstrate the accuracy of the fast sinc transform, see Figure 5.5
+
+**$\bullet$ fastsinc.m** </br>
+$\quad\leadsto$ Class file containing the fast sinc transform described in Algorithm 5.10
+
+**$\bullet$ example_sinctrafo_frequency_regularization.m** </br>
+$\quad\leadsto$ Code file to demonstrate the accuracy of the fast sinc transform for frequency regularized Shannon sampling formulas, see Figure 5.6
+
+**$\bullet$ example_sinctrafo_spatial_regularization.m** </br>
+$\quad\leadsto$ Code file to demonstrate the accuracy of the fast sinc transform for spatial regularized Shannon sampling formulas, see Figure 5.7
+
+**$\bullet$ example_approx_nfft_like.m** </br>
+$\quad\leadsto$ Code file to compare the approximation error of the NFFT-like approach and the NFFT, see Figure 5.8
+
