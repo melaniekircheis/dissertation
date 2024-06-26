@@ -104,9 +104,19 @@ f = f1.*f2; %F = reshape(f,Nx,Nx);
 % Exact weights
 tic;
 plan_2M = nfft(2,2*M,N); % create plan of class type nfft
-plan_2M.x = x; % set nodes in plan and perform precomputations
-e0 = zeros(prod(2*M),1); e0(prod(2*M)/2+M(1)+1) = 1;
-w_exact = lsqr(@(x,transp_flag) nfft_transp_mult(plan_2M,x,transp_flag),e0,1e-15,1e5);
+plan_2M.x = -x; % set nodes in plan and perform precomputations
+if N<prod(2*M)
+    [w_exact,~] = pcg(@(x) AAstar_mult(plan_2M,x,'notransp'),ones(N,1),1e-15,1000);
+else
+    % Init right side
+    e0 = zeros(prod(2*M),1); e0(2*M(1)*M(1)+M(1)+1) = 1;
+    % Iteration using function handle
+    [y,~] = pcg(@(x) AAstar_mult(plan_2M,x,'transp'),e0,1e-15,1000);
+    % NFFT
+    plan_2M.fhat = y;
+    nfft_trafo(plan_2M);
+    w_exact = plan_2M.f;
+end%if
 t_exact(l) = toc;
 
 % Density compensation factors using normal equations of first kind, cf. [Sedarat et al.], [Rosenfeld]
