@@ -14,6 +14,10 @@ addpath('..\3-Direct_inversion_methods_for_the_NFFT\grids')  % grids
 addpath('..\3-Direct_inversion_methods_for_the_NFFT\opt_B')  % matrix optimization method
 addpath('..\3-Direct_inversion_methods_for_the_NFFT')  % window functions of NFFT
 
+% Disable the warning that tolerance for PCG might be too small
+warning('off','MATLAB:pcg:tooSmallTolerance')
+warning('off','MATLAB:nearlySingularMatrix')
+
 %% Setup
 
 % Switch flag for the two experiments
@@ -26,7 +30,7 @@ switch flag_experiment
     case 2 % b) second experiment
         s = 3;
         a = 6;
-        R = 40:8:96;
+        R = 40:8:104;
 end%switch
 v = char('polar','mpolar','linogram','spiral');
 
@@ -111,11 +115,7 @@ else
     % Init right side
     e0 = zeros(prod(2*M),1); e0(2*M(1)*M(1)+M(1)+1) = 1;
     % Iteration using function handle
-    [y,~] = pcg(@(x) AAstar_mult(plan_2M,x,'transp'),e0,1e-15,1000);
-    % NFFT
-    plan_2M.fhat = y;
-    nfft_trafo(plan_2M);
-    w_exact = plan_2M.f;
+    w_exact = lsqr(@(x,transp_flag) nfft_transp_mult(plan_2M,x,transp_flag),e0,1e-15,1e5);
 end%if
 t_exact(l) = toc;
 
@@ -306,6 +306,19 @@ end%if
 function y = my_sinc(N,x)
     y = (sin(N*x)./(N*x));
     y(x==0) = 1; 
+end%function
+
+% Multiplication by A* using NFFT software
+function x = nfft_transp_mult(plan,x,transp_flag)
+  if strcmp(transp_flag,'transp')
+    plan.fhat = x;
+    nfft_trafo(plan);
+    x = plan.f;
+  else
+    plan.f = x;
+    nfft_adjoint(plan);
+    x = plan.fhat;
+  end
 end%function
 
 % Multiplication by A and A* using NFFT software
