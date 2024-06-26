@@ -306,17 +306,19 @@ end%if
 function y = my_sinc(N,x)
     y = (sin(N*x)./(N*x));
     y(x==0) = 1; 
-end
+end%function
 
-% Multiplication by A* using NFFT software
-function x = nfft_transp_mult(plan,x,transp_flag)
-  if strcmp(transp_flag,'transp')
-    plan.fhat = x;
-    nfft_trafo(plan);
-    x = plan.f;
-  else
-    plan.f = x;
-    nfft_adjoint(plan);
-    x = plan.fhat;
-  end
-end
+% Multiplication by A and A* using NFFT software
+function x = AAstar_mult(plan,x,transp_flag)
+    if strcmp(transp_flag,'notransp')
+        plan.f = x;
+        nfft_adjoint(plan);
+        nfft_trafo(plan);
+        x = plan.f;
+    else
+        plan.fhat = x;
+        nfft_trafo(plan);
+        nfft_adjoint(plan);
+        x = plan.fhat;
+    end%if
+end%function
