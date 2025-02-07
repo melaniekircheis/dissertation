@@ -7,15 +7,11 @@ set(groot,'defaultAxesTickLabelInterpreter','latex');
 set(groot,'defaulttextinterpreter','latex');  
 set(groot,'defaultlegendinterpreter','latex');  
 
-% % Add necessary folders to search path
-% addpath('..\nfft\matlab\nfft')  % NFFT software
-% addpath('..\nfft\applications\polarFFT')  % Shepp Logan phantom
-% error('NFFT software needs to be installed on your system first!') % paths above need to be adjusted and this line to be deleted
+% Add necessary folders to search path
+addpath('..\nfft\matlab\nfft')  % NFFT software
+addpath('..\nfft\applications\polarFFT')  % Shepp Logan phantom
+error('NFFT software needs to be installed on your system first!') % paths above need to be adjusted and this line to be deleted
 addpath('opt_B')  % optimization methods for sparse matrix B
-
-addpath('C:\msys64\home\melan\nfft-3.5.2\matlab\nfft')  % NFFT
-addpath('C:\msys64\home\melan\nfft-3.5.2\applications\polarFFT')  % phantom
-addpath('C:\msys64\home\melan\nfft-3.5.2\matlab\infft1d')  % infft from NFFT software
 
 %% Setup
 
